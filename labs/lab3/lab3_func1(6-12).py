@@ -35,12 +35,14 @@ def unique_list(l):
 list1 = list(map(int, input().split()))
 print(unique_list(list1))
 # 11
-
+def palindrome(w):
+    if w == w[::-1]:
+        return "Yes, it is palindrome"
+    else:
+        return "Not palindrome"
 w = str(input())
-if w == w[::-1]:
-    print("Yes, it is palindrome")
-else:
-    print("Not palindrome")
+print(palindrome(w))
+
 
 # 12
 def histogram(list):
