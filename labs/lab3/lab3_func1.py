@@ -14,43 +14,37 @@ far = int(input())
 print(temperature(far))
 
 # 3
-def solve(num_heads, num_legs):
-    ns = "No solutions!"
-    for i in range(num_heads + 1):
-        j = num_heads - i
-        if 2 * i + 4 * j == num_legs:
-            return i, j
-    return ns, ns
-
-
-if __name__ == "__main__":
-    numheads = 35
-    numlegs = 94
-
-    solutions = solve(numheads, numlegs)
-    print(solutions)
-
+def solve(numlegs, numheads):
+    for i in range(1, numheads+1):
+        if (i*4)+(numheads-i)*2 == numlegs:
+            ans = f"{i} rabbits,{numheads-i} chickens"
+            return ans
+print("Enter number of legs:")
+numlegs=int(input())
+print("Enter number of heads")
+numheads=int(input())
+print(solve(numlegs, numheads))
 # 4
-def isPrime(nums):
-    for i in nums:
-        if nums[i] == 1 or nums[i] == 2 or nums[i] == 3:
-            return True
-        elif nums[i] % 2 == 0:
+def filter_prime(n):
+    for i in range(2, n):
+        if n % i == 0:
             return False
-        for n in range(2, len(nums)):
-            if nums[i] % n == 0:
-                return False
-        return True
+    return True
 
-
-nums = list(map(int, input().split()))
-if isPrime(nums) == True:
-    print(nums)
+print("Enter size of list:")
+n = int(input())
+print("Enter elements of list:")
+l = list()
+for i in range(n):
+    x = int(input())
+    if filter_prime(x):
+        l.append(x)
+print(l)
 
 # 5
-def factorial(n):
+def factorial(a):
     fact = 1
-    for i in range(1, n + 1):
+    for i in range(1, a + 1):
         fact = fact * i
     return fact
 
@@ -64,6 +58,7 @@ def reverse(w):
 
 w = str(input())
 print(reverse(w))
+
 
 
 
