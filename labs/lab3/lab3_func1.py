@@ -58,10 +58,12 @@ permut = str(input())
 print(factorial(len(permut)))
 
 # 6
-w = str(input())
-rev = w.split()
-print(*list(reversed(rev)))
+def reverse(w):
+    rev = w.split()
+    return ' '.join(reversed(rev))
 
+w = str(input())
+print(reverse(w))
 
 
 
