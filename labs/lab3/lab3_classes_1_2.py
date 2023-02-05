@@ -1,5 +1,5 @@
 # 1
-class with2meth(object):
+class with2meth:
     def getString(self):
         self.s = input()
     def printString(self):
