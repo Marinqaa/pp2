@@ -82,13 +82,6 @@ def drawCircleBetween(screen, element1, element2):
         drawLineBetween(screen, element1, element2)
 
 
-def enter_own():
-    num1 = int(input("Enter the first value: ")) % 256
-    num2 = int(input("Enter the second value: ")) % 256
-    num3 = int(input("Enter the third value: ")) % 256
-    return (num1, num2, num3)
-
-
 def main():
     radius = 15
     points = []
